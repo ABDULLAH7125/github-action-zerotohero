@@ -9,8 +9,8 @@ jobs:
    runs-on: ubuntu-latest
    
    steps:
-     - name: say hello to user
-       run: echo "hello dosto"
+     - name: say hello to abdullah
+       run: echo "hello abdullah"
 
      - name: say hello to username
        run: echo "hello $USER"
