@@ -1,0 +1,16 @@
+name: abdullah
+
+on: 
+ push:
+   branches: [main]
+
+jobs:
+
+  greet:
+   runs-on: ubuntu-22.04
+   steps:
+     - name: abdullah ki pehli yml file
+       run: echo "hello abdullah how are you"
+
+     - name: username
+       run: echo "find $USER"
