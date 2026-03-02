@@ -2,8 +2,10 @@ name: cicd
 
 on:
  workflow_dispatch:
+   
 
 jobs:
+
   code:
    runs-on: ubuntu-latest
    steps:
@@ -11,18 +13,21 @@ jobs:
        run: echo "code is checkout"
 
   build:
+   needs: code
    runs-on: ubuntu-latest
    steps:
      - name: build is run
        run: echo "build sucessffully"
        
   test:
+   needs: build
    runs-on: ubuntu-latest
    steps:
      - name: testing
        run: echo "approve"
        
   deploy:
+   needs: test
    runs-on: ubuntu-latest
    steps:
      - name: deploy
